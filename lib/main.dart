@@ -1,4 +1,4 @@
-import 'package:bmindex/homePage.dart';
+import 'package:bmindex/splashview_.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: homePage(),
+      home: splashview(),
     );
   }
 }

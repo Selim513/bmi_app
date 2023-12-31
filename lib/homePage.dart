@@ -245,7 +245,9 @@ class _homePageState extends State<homePage> {
                                         shape: const CircleBorder()),
                                     onPressed: () {
                                       setState(() {
-                                        age--;
+                                        if (age > 100) {
+                                          age--;
+                                        }
                                       });
                                     },
                                     icon: const Icon(
@@ -258,7 +260,9 @@ class _homePageState extends State<homePage> {
                                         shape: const CircleBorder()),
                                     onPressed: () {
                                       setState(() {
-                                        age++;
+                                        if (age < 100) {
+                                          age++;
+                                        }
                                       });
                                     },
                                     icon: const Icon(
@@ -287,8 +291,7 @@ class _homePageState extends State<homePage> {
                     onPressed: () {
                       double result =
                           weight.toDouble() / (height * .01 * height * .01);
-                             
-                       
+
                       Navigator.pushReplacement(
                           context,
                           MaterialPageRoute(
